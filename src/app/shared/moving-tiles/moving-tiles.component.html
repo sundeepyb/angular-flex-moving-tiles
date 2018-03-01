@@ -1,0 +1,6 @@
+<div class="container">
+  <div *ngFor="let eachItem of tileItems"
+   class="item" [class.expand]="eachItem.id==selectedTile" [style.order]="eachItem.order"
+   [ngStyle]="{'background-image':'url(' + imgData[eachItem.id] + ')'}"
+   (click)="selectTile($event, eachItem)"></div>
+</div>
